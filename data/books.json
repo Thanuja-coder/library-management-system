@@ -1,0 +1,85 @@
+{
+    
+"books": [
+  {
+    "id": 1,
+    "name": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": "Classic Fiction",
+    "price": 8.99,
+    "publisher": "J.B. Lippincott"
+  },
+  {
+    "id": 2,
+    "name": "1984",
+    "author": "George Orwell",
+    "genre": "Dystopian",
+    "price": 9.99,
+    "publisher": "Secker & Warburg"
+  },
+  {
+    "id": 3,
+    "name": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "genre": "Classic Fiction",
+    "price": 7.99,
+    "publisher": "Scribner"
+  },
+  {
+    "id": 4,
+    "name": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "genre": "Science",
+    "price": 12.99,
+    "publisher": "Bantam Books"
+  },
+  {
+    "id": 5,
+    "name": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "genre": "Classic Fiction",
+    "price": 8.49,
+    "publisher": "Little, Brown"
+  },
+  {
+    "id": 6,
+    "name": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "price": 10.99,
+    "publisher": "Allen & Unwin"
+  },
+  {
+    "id": 7,
+    "name": "Clean Code",
+    "author": "Robert C. Martin",
+    "genre": "Software Engineering",
+    "price": 39.99,
+    "publisher": "Prentice Hall"
+  },
+  {
+    "id": 8,
+    "name": "The Alchemist",
+    "author": "Paulo Coelho",
+    "genre": "Philosophical Fiction",
+    "price": 9.99,
+    "publisher": "HarperOne"
+  },
+  {
+    "id": 9,
+    "name": "Thinking, Fast and Slow",
+    "author": "Daniel Kahneman",
+    "genre": "Psychology",
+    "price": 16.99,
+    "publisher": "Farrar, Straus and Giroux"
+  },
+  {
+    "id": 10,
+    "name": "The Odyssey",
+    "author": "Homer",
+    "genre": "Epic Poetry",
+    "price": 6.99,
+    "publisher": "Penguin Classics"
+  }
+]
+}
