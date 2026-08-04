@@ -1,10 +1,10 @@
-# 📚 Library Management System API
+#  Library Management System API
 
 A simple, beginner-friendly RESTful API built with **Node.js** and **Express.js** to manage users, books, subscriptions, and fine calculations in a library.
 
 This project is perfect for learning the core concepts of Express.js, routing, handling HTTP requests (GET, POST, PUT, DELETE), and working with JSON data locally.
 
-## ✨ Features
+##  Features
 
 - **User Management**: Register new users, fetch details, update user information, and delete users.
 - **Book Management**: Add new books, view all books, update book details, and delete books.
@@ -15,13 +15,13 @@ This project is perfect for learning the core concepts of Express.js, routing, h
   - Calculates subscription expiration based on user plan (`Basic`: 3 Months, `Standard`: 6 Months, `Premium`: 12 Months).
   - Automatically calculates fines if a user misses their book return date or subscription renewal date.
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **JavaScript (ES6+)**
 - **Node.js**
 - **Express.js**
 
-## 🚀 Getting Started
+## Getting Started
 
 Follow these steps to set up the project on your local machine.
 
@@ -61,7 +61,7 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your computer.
 | **DELETE** | `/users/:id` | Delete a user from the system by their ID. |
 | **GET** | `/users/subscription-details/:id` | Get user's subscription status, days left, and fine amounts. |
 
-### 📚 Books (`/books`)
+###  Books (`/books`)
 
 | Method | Endpoint | Description |
 | :--- | :--- | :--- |
@@ -73,7 +73,7 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your computer.
 | **GET** | `/books/issued` | Get a list of all currently issued books and their issuers. |
 | **GET** | `/books/issued/withFine` | Get all issued books along with any calculated fines. |
 
-## 💰 Subscription & Fine Logic
+##  Subscription & Fine Logic
 
 ### Subscription Types
 - **Basic**: Valid for 3 Months (90 days)
@@ -85,7 +85,7 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your computer.
 - If a user misses their **subscription renewal date** (but returned the book on time): Fine is **Rs 100**.
 - If a user misses **both** the renewal date and the return date: Fine is **Rs 200**.
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 library-management-system/
