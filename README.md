@@ -1,51 +1,104 @@
-# library-management-system
+# 📚 Library Management System API
 
-This is a libraryy management API Backend for the management of users and the books 
+A simple, beginner-friendly RESTful API built with **Node.js** and **Express.js** to manage users, books, subscriptions, and fine calculations in a library.
 
-## Routes and Endpoints 
+This project is perfect for learning the core concepts of Express.js, routing, handling HTTP requests (GET, POST, PUT, DELETE), and working with JSON data locally.
 
-## /user
-GET: Get all the list of user in the system 
-POST: Creat/Reggister a new user 
+## ✨ Features
 
-## /users{id}
-GET  :Get a user by their ID 
-PUT:Updating a user by their ID 
-DELETE: Delete a use by their ID
+- **User Management**: Register new users, fetch details, update user information, and delete users.
+- **Book Management**: Add new books, view all books, update book details, and delete books.
+- **Library Operations**: 
+  - Track which books are currently issued.
+  - View subscription details of users.
+- **Automated Fine & Subscription Calculation**:
+  - Calculates subscription expiration based on user plan (`Basic`: 3 Months, `Standard`: 6 Months, `Premium`: 12 Months).
+  - Automatically calculates fines if a user misses their book return date or subscription renewal date.
 
-## /users/subscription-details/{id}
-GET:Get a user subscription details by their ID 
->>date of subscription 
->> valid till ?
->> Fine any ??
+## 🛠️ Tech Stack
 
-## /books
-GET: get all teh books in teh system 
-POST: Add a new book to the system 
- 
-## /books/{id}
-GET:Get a book by its ID
-PUT: Updat ethe book details 
-DELETE: Delet a book by its iD 
+- **JavaScript (ES6+)**
+- **Node.js**
+- **Express.js**
 
-## /book/issued
-GET: get all the issued books 
+## 🚀 Getting Started
 
-## /books/issued/withFine
-GET:Get all issued books with their fine amount 
+Follow these steps to set up the project on your local machine.
 
-## Subscription Types 
->> Basic ( 3 months)
->> Standard (6 months)
->> Premium (12 months)
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed on your computer.
 
->> If the user missed the renewal date, the user should be collected with Rs100
->>If the user missed the subscription date, the user should be collected with Rs100
->>If the user missed the renewal and subscription date, the user should be collected with Rs200
+### Installation
 
+1. **Clone the repository** (or download the source code):
+   ```bash
+   git clone https://github.com/Thanuja-coder/library-management-system.git
+   cd library-management-system
+   ```
 
-## Commands:
-npm init
-npm i express
-npm i nodemon --save-dev
-npm run dev
+2. **Install Dependencies**:
+   The project uses `express` and `nodemon` (for auto-restarting the server during development).
+   ```bash
+   npm install
+   ```
+
+3. **Run the Development Server**:
+   ```bash
+   npm run dev
+   ```
+   The server will start running on `http://localhost:8081`.
+
+## 📖 API Endpoints Reference
+
+### 🧑‍🤝‍🧑 Users (`/users`)
+
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| **GET** | `/users` | Get a list of all users in the system. |
+| **POST** | `/users` | Register/Create a new user. |
+| **GET** | `/users/:id` | Get details of a specific user by their ID. |
+| **PUT** | `/users/:id` | Update data of an existing user by their ID. |
+| **DELETE** | `/users/:id` | Delete a user from the system by their ID. |
+| **GET** | `/users/subscription-details/:id` | Get user's subscription status, days left, and fine amounts. |
+
+### 📚 Books (`/books`)
+
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| **GET** | `/books` | Get a list of all books in the library. |
+| **POST** | `/books` | Add a new book to the library. |
+| **GET** | `/books/:id` | Get details of a specific book by its ID. |
+| **PUT** | `/books/:id` | Update details of an existing book by its ID. |
+| **DELETE** | `/books/:id` | Delete a book by its ID. |
+| **GET** | `/books/issued` | Get a list of all currently issued books and their issuers. |
+| **GET** | `/books/issued/withFine` | Get all issued books along with any calculated fines. |
+
+## 💰 Subscription & Fine Logic
+
+### Subscription Types
+- **Basic**: Valid for 3 Months (90 days)
+- **Standard**: Valid for 6 Months (180 days)
+- **Premium**: Valid for 12 Months (365 days)
+
+### Fines
+- If a user misses their **book return date** (but subscription is active): Fine is **Rs 100**.
+- If a user misses their **subscription renewal date** (but returned the book on time): Fine is **Rs 100**.
+- If a user misses **both** the renewal date and the return date: Fine is **Rs 200**.
+
+## 📂 Project Structure
+
+```text
+library-management-system/
+├── Routes/
+│   ├── books.js         # Routes and logic for books endpoints
+│   └── users.js         # Routes and logic for users endpoints
+├── data/
+│   ├── books.json       # Mock JSON database for books
+│   └── users.json       # Mock JSON database for users
+├── index.js             # Entry point of the Express server
+├── package.json         # Project metadata and dependencies
+└── README.md            # Project documentation
+```
+
+---
+*Created as a beginner project to master the fundamentals of Javascript and Express APIs!*
